@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ct6lhbffk5xms" path="res://assets/SpaceBar-0001.png" id="1_cuejo"]
 [ext_resource type="Texture2D" uid="uid://bduiic42qpvrv" path="res://assets/Player-0001.png" id="1_j3pd6"]
 [ext_resource type="FontFile" uid="uid://lec4ih6hiyt" path="res://assets/CONCHARS.png" id="3_ox02b"]
-[ext_resource type="Script" path="res://scenes/menu_manager.gd" id="4_pgp7q"]
+[ext_resource type="Script" path="res://scripts/menu_manager.gd" id="4_pgp7q"]
 
 [sub_resource type="Animation" id="Animation_tfrcr"]
 length = 0.4
