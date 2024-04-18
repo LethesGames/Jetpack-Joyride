@@ -491,10 +491,23 @@ metadata/_aseprite_wizard_interface_config_ = {
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-410, 193)
+position = Vector2(-408, 153)
 
 [node name="Label" type="Label" parent="Sprite2D"]
 offset_right = 880.0
 offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("3_ox02b")
-text = "PRESS SPACE TO FLY AND FART ON OBJECTO TO DESTROY THEM!"
+text = "PRESS SPACE TO FLY AND FART ON OBJECTS TO DESTROY THEM!"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-270, 202)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="Sprite2D2"]
+offset_right = 880.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_ox02b")
+text = "PRESS SPACE TO PLAY!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D2"]
