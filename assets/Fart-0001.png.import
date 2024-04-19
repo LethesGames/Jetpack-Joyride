@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bubsnmaq2yp42"
-path="res://.godot/imported/Player-0001.png-13cf4151cbafe2cdc7825f6ae5147989.ctex"
+uid="uid://col130dh57k71"
+path="res://.godot/imported/Fart-0001.png-cd74e8b5a761fb99091f22954b791b93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Player-0001.png"
-dest_files=["res://.godot/imported/Player-0001.png-13cf4151cbafe2cdc7825f6ae5147989.ctex"]
+source_file="res://assets/Fart-0001.png"
+dest_files=["res://.godot/imported/Fart-0001.png-cd74e8b5a761fb99091f22954b791b93.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bubsnmaq2yp42"
-path="res://.godot/imported/Player-0001.png-2fbe929824ad7615e3d78bd70474b805.ctex"
+uid="uid://batdxiewdrogi"
+path="res://.godot/imported/TntBox-0003.png-f368dc597a01d331d355286aab2a9e4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Player-0001.png"
-dest_files=["res://.godot/imported/Player-0001.png-2fbe929824ad7615e3d78bd70474b805.ctex"]
+source_file="res://assets/TntBox-0003.png"
+dest_files=["res://.godot/imported/TntBox-0003.png-f368dc597a01d331d355286aab2a9e4b.ctex"]
 
 [params]
 

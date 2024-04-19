@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://co7424752cip3"]
 
 [ext_resource type="Texture2D" uid="uid://ct6lhbffk5xms" path="res://assets/SpaceBar-0001.png" id="1_cuejo"]
-[ext_resource type="Texture2D" uid="uid://bduiic42qpvrv" path="res://assets/Player-0001.png" id="1_j3pd6"]
+[ext_resource type="Texture2D" uid="uid://bubsnmaq2yp42" path="res://assets/Player-0001.png" id="1_j3pd6"]
 [ext_resource type="FontFile" uid="uid://lec4ih6hiyt" path="res://assets/CONCHARS.png" id="3_ox02b"]
 [ext_resource type="Script" path="res://scripts/menu_manager.gd" id="4_pgp7q"]
 
@@ -379,6 +379,33 @@ _data = {
 "Side-Jump": SubResource("Animation_g5dlj")
 }
 
+[sub_resource type="Animation" id="Animation_l44sl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-270, 202)]
+}
+
 [sub_resource type="Animation" id="Animation_n3drr"]
 resource_name = "expand"
 length = 0.3
@@ -406,33 +433,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-270, 202), Vector2(-340, 202), Vector2(-270, 202)]
-}
-
-[sub_resource type="Animation" id="Animation_l44sl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2, 2)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-270, 202)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rc82u"]
