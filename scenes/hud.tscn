@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://odjs0t2r37t7"]
+
+[ext_resource type="FontFile" uid="uid://lec4ih6hiyt" path="res://assets/CONCHARS.png" id="1_f37l5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqpp3"]
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 185.0
+offset_bottom = 131.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sqpp3")
+
+[node name="CurrentScore" type="Label" parent="PanelContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_f37l5")
+theme_override_font_sizes/font_size = 100
+text = "0"

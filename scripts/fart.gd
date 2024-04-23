@@ -13,6 +13,5 @@ func _process(delta):
 
 func _on_area_entered(area):
 	if area.name.contains("Obstacle"):
-		get_tree().call_group("GameManager", "add_point")
 		queue_free()
 	pass # Replace with function body.

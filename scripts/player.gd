@@ -1,30 +1,33 @@
 extends Area2D
 
 
-var heightMax:float = Configurations.maxMapHeight
-var heighMin:float = Configurations.minMapHeight
-var playerHeight:int = Configurations.playerHeight
-var fartScene:Resource = preload("res://scenes/fart.tscn")
-var fireRate = Timer.new()
-var timeToFart:float = 1
-var fartCounter:int = 0
+var height_max:float = Configurations.max_map_height
+var heigh_min:float = Configurations.min_map_height
+var player_height:int = Configurations.player_height
+var fart_scene:Resource = preload("res://scenes/fart.tscn")
+var fire_rate = Timer.new()
+var time_to_fart:float = 1
+var fart_counter:int = 0
+
+
+#TODO: Add logic to manage animaitons
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	fireRate.set_one_shot(true)
-	add_child(fireRate)
+	fire_rate.set_one_shot(true)
+	add_child(fire_rate)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):		
 	if Input.is_action_pressed("space"):
-		position.y = clamp(position.y - 1, heighMin, heightMax)
+		position.y = clamp(position.y - 1, heigh_min, height_max)
 		instantiate_fart()
 		pass
 	else:
-		if position.y < (heightMax + playerHeight):
+		if position.y < (height_max + player_height):
 			position.y += 1
 	pass
 
@@ -37,12 +40,10 @@ func _on_area_entered(area) -> void:
 
 
 func instantiate_fart() -> void:
-	if fireRate.is_stopped():
-		#TODO: *****Susceptible of being moved to a fart component
-		var fartNode:Node = fartScene.instantiate()
-		fartNode.name = "fart" + str(fartCounter)
-		fartCounter += 1
-		fartNode.position = position
-		get_parent().add_child(fartNode)
-		#********
-		fireRate.start(timeToFart)
+	if fire_rate.is_stopped():
+		var fart_node:Node = fart_scene.instantiate()
+		fart_node.name = "fart" + str(fart_counter)
+		fart_counter += 1
+		fart_node.position = Vector2(position.x, position.y + player_height)
+		get_parent().add_child(fart_node)
+		fire_rate.start(time_to_fart)

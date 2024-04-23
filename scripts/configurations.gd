@@ -1,5 +1,5 @@
 extends Node
 
-var minMapHeight:float = -50
-var maxMapHeight:float = 50
-var playerHeight:int = 12
+var min_map_height:float = -50
+var max_map_height:float = 50
+var player_height:int = 12

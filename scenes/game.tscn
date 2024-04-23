@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://pifavoqgystg"]
+[gd_scene load_steps=3 format=3 uid="uid://pifavoqgystg"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_785mt"]
+[ext_resource type="PackedScene" uid="uid://odjs0t2r37t7" path="res://scenes/hud.tscn" id="2_qc8qj"]
 
 [node name="Camera2D" type="Camera2D"]
+zoom = Vector2(2, 2)
+
+[node name="Hud" parent="." instance=ExtResource("2_qc8qj")]
+follow_viewport_scale = 0.51
+
+[node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_785mt")
+
+[node name="Timer" type="Timer" parent="GameManager"]
+autostart = true
+
+[connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
