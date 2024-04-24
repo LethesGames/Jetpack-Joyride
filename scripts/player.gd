@@ -26,6 +26,8 @@ func _ready():
 func _process(delta):	
 	change_animations()	
 	if Input.is_action_pressed("space"):
+		if position.y >= (height_max):
+			animation_player.play("RunToFly")
 		position.y = clamp(position.y - 1, heigh_min, height_max)
 		instantiate_fart()
 		pass
@@ -37,9 +39,10 @@ func _process(delta):
 
 func change_animations() -> void:
 	if position.y >= (height_max):
-		animation_player.play("Run", 1, 1.0, false)
+		animation_player.play("Run")
 	else:
-		animation_player.play("Fly", 1, 1.0, false)
+		if not animation_player.is_playing():
+			animation_player.play("Fly")
 	pass
 
 func _on_area_entered(area) -> void:
@@ -57,5 +60,4 @@ func instantiate_fart() -> void:
 		fart_node.position = Vector2(position.x, position.y + player_height)
 		get_parent().add_child(fart_node)
 		fire_rate.start(time_to_fart)
-		animation_player.play("Fart", 1, 1.0, false)
 	pass
