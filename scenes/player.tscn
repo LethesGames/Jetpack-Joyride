@@ -185,6 +185,6 @@ metadata/_aseprite_wizard_interface_config_ = {
 libraries = {
 "": SubResource("AnimationLibrary_6cpw5")
 }
-blend_times = [&"Fly", &"Run", 0.5, &"Run", &"Fly", 0.5]
+blend_times = [&"Run", &"Fly", 0.5, &"Fly", &"Run", 0.5]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
