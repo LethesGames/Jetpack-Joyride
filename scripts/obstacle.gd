@@ -1,7 +1,5 @@
 extends Area2D
 
-#TODO: this might be a general obstacle script if all the logic is shared between every obstacle
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

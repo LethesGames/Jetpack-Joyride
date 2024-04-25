@@ -11,9 +11,6 @@ var time_to_fart:float = 1
 var fart_counter:int = 0
 
 
-#TODO: Fix logic to manage animaitons
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animation_player = get_node("AnimationPlayer")

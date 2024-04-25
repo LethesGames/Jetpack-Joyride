@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b5urnc826xb3"]
 
-[ext_resource type="Script" path="res://scripts/saw.gd" id="1_8wr2n"]
+[ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_8wr2n"]
 [ext_resource type="Texture2D" uid="uid://t1l2xtcvnvvh" path="res://assets/SpikeBall-0002.png" id="2_1gu6r"]
 
 [sub_resource type="Animation" id="Animation_5yol1"]

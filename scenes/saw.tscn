@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dtyiexm6ijjwi"]
 
-[ext_resource type="Script" path="res://scripts/saw.gd" id="1_5w5je"]
+[ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_5w5je"]
 [ext_resource type="Texture2D" uid="uid://dnx6ft1xhlqly" path="res://assets/Saw-0004.png" id="2_iwn66"]
 
 [sub_resource type="Animation" id="Animation_5yol1"]

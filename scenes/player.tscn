@@ -164,7 +164,6 @@ texture_filter = 1
 texture = ExtResource("1_2y515")
 hframes = 4
 vframes = 4
-frame = 3
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
 "keep_anim_length": false,
