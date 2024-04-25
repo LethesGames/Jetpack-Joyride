@@ -1,15 +1,16 @@
 extends Node
 
-
 @onready var player_scene = preload("res://scenes/player.tscn")
 @onready var spike_ball_scene = preload("res://scenes/spike_ball.tscn")
 @onready var saw_scene = preload("res://scenes/saw.tscn")
 @onready var tnt_box_scene = preload("res://scenes/tnt_box.tscn")
+
 var min_position_obstacle_spawning:Vector2 = Configurations.min_position_obstacle_spawning
 var max_position_obstacle_spawning:Vector2 = Configurations.max_position_obstacle_spawning
 
 var obstacles = []
 var current_score_label
+var highest_score_label
 var current_score:int = 0
 var obstacles_to_instantiate:int = 2
 var current_obstacles_count = 0
@@ -17,7 +18,10 @@ var current_obstacles_count = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	current_score_label = get_parent().get_node("Hud/PanelContainer/CurrentScore")
+	current_score_label = get_parent().get_node("Hud/PanelContainer/HBoxContainer/MarginContainer/CurrentScore")
+	highest_score_label = get_parent().get_node("Hud/PanelContainer/HBoxContainer/MarginContainer2/HighestScore")
+	print("SaveData maxScore: ", Autoload.save_data.max_score)
+	highest_score_label.text = str(Autoload.save_data.max_score)
 	obstacles.append(spike_ball_scene) 
 	obstacles.append(saw_scene)
 	obstacles.append(tnt_box_scene)
@@ -51,9 +55,19 @@ func instantiate_obstacle() -> void:
 
 
 func end_game() -> void:
-	#TODO: Show game over scene
+	Autoload.save_data.run_score = current_score
+	update_max_score()
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	pass
 
+
+func update_max_score() -> void:
+	if Autoload.save_data.max_score < current_score:
+		Autoload.save_data.max_score = current_score
+		Autoload.save_data.save()
+	pass
+	
+	
 func remove_obstacle() -> void:
 	current_obstacles_count -= 1
 	pass

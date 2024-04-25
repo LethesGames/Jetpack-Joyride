@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxqlxq03ukjtu"]
 
-[ext_resource type="Script" path="res://scenes/game_over.gd" id="1_c6upi"]
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_c6upi"]
 [ext_resource type="FontFile" uid="uid://lec4ih6hiyt" path="res://assets/CONCHARS.png" id="1_l78qa"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_olqvu"]
@@ -52,6 +52,18 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_l78qa")
 theme_override_font_sizes/font_size = 50
 text = "SCORE: 40"
+horizontal_alignment = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="HighestScore" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer5"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_l78qa")
+theme_override_font_sizes/font_size = 50
+text = "HIGHEST SCORE: 60"
 horizontal_alignment = 1
 
 [node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
