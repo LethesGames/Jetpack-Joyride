@@ -154,9 +154,6 @@ _data = {
 "Side-Jump": SubResource("Animation_lgb7x")
 }
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w2dtv"]
-load_path = "res://.godot/imported/Player-0001.png-2fbe929824ad7615e3d78bd70474b805.ctex"
-
 [sub_resource type="Animation" id="Animation_4xv43"]
 length = 0.2
 loop_mode = 1
@@ -379,6 +376,9 @@ _data = {
 "Side-Jump": SubResource("Animation_g5dlj")
 }
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aildq"]
+load_path = "res://.godot/imported/Player-0001.png-13cf4151cbafe2cdc7825f6ae5147989.ctex"
+
 [sub_resource type="Animation" id="Animation_l44sl"]
 length = 0.001
 tracks/0/type = "value"
@@ -456,16 +456,15 @@ speed_scale = 0.5
 texture_filter = 1
 position = Vector2(-120, 0)
 scale = Vector2(4, 4)
-texture = SubResource("CompressedTexture2D_w2dtv")
+texture = ExtResource("1_j3pd6")
 hframes = 4
 vframes = 4
-frame = 3
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
 "keep_anim_length": false,
 "layer": "",
 "o_ex_p": "",
-"o_folder": "",
+"o_folder": "res://assets",
 "o_name": "",
 "only_visible": true,
 "player": "PlayerRun/AnimationPlayer",
@@ -529,10 +528,9 @@ speed_scale = 0.5
 [node name="Sprite2D" type="Sprite2D" parent="PlayerJump"]
 texture_filter = 1
 scale = Vector2(4, 4)
-texture = ExtResource("1_j3pd6")
+texture = SubResource("CompressedTexture2D_aildq")
 hframes = 4
 vframes = 4
-frame = 3
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
 "keep_anim_length": false,
